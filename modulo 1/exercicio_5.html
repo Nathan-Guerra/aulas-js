@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<title>
+		Exercicio JS
+	</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<script>
+		function mostraSkills(usuarios) {
+			let objUsuarios = usuarios.join(',');
+			for (let usuario of usuarios) {
+				console.log(`O ${usuario.nome} possui as habilidades: ` +
+					usuario.habilidades.join(', '));
+			}
+		}
+
+		let usuarios = [
+			{
+				nome: "Diego",
+				habilidades: [
+					"Javascript",
+					"ReactJS",
+					"Redux",
+				]
+			}, {
+				nome: "Gabriel",
+				habilidades: [
+					"VueJS",
+					"Ruby on Rails",
+					"Elixir",
+				]
+			},
+		];
+
+		mostraSkills(usuarios);
+	</script>
+</body>
+
+</html>

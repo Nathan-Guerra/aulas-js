@@ -1,0 +1,29 @@
+<html>
+
+<head>
+	<title>
+		Exercicio JS
+	</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<script>
+		function temHabilidade(skills) {
+			let js = "Javascript";
+			if (skills.indexOf(js) >= 0) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+		let skills = ["Javascript", "ReactJS", "React Native"];
+		let sabeJS = temHabilidade(skills);
+
+		console.log(sabeJS);
+	</script>
+</body>
+
+</html>

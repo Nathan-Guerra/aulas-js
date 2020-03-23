@@ -1,0 +1,29 @@
+<html>
+
+<head>
+	<title>
+		Exercicio JS
+	</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<script>
+		let endereco = {
+			rua: "Rua dos pinheiros",
+			numero: 1293,
+			bairro: "Centro",
+			cidade: "São Paulo",
+			uf: "SP"
+		};
+
+		function mostraEndereco(endereco) {
+			console.log(`O usuário mora em ${endereco.cidade} / ${endereco.uf}, no bairro ${endereco.bairro}, na rua "${endereco.rua}" com nº ${endereco.numero}.`)
+		}
+
+		mostraEndereco(endereco);
+	</script>
+</body>
+
+</html>

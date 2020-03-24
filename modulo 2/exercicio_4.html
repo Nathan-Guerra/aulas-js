@@ -1,0 +1,53 @@
+<html>
+
+<head>
+	<title>
+		Exercicio JS
+	</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<div id="app">
+		<input type="text" name="nome">
+		<button onClick="adicionar()">Adicionar</button>
+	</div>
+	<ul class="lista"></ul>
+
+	<script>
+		function adicionaItens(nomes) {
+			let ulElem = document.querySelector('.lista');
+
+			for (let nome of nomes) {
+				let li = document.createElement('li');
+				let text = document.createTextNode(nome);
+				li.appendChild(text);
+				ulElem.appendChild(li);
+			}
+		}
+
+		let nomes = ['Diego', 'Gabriel', 'Lucas'];
+
+		adicionaItens(nomes);
+
+		function adicionar() {
+			let ulElem = document.querySelector('.lista');
+			let li = document.createElement('li');
+			let inputElem = document.querySelector('input[name="nome"]');
+			let text = inputElem.value;
+
+			li.append(text);
+			ulElem.appendChild(li);
+
+			apagar(inputElem);
+		}
+
+		function apagar(elem) {
+			elem.value = '';
+		}
+
+	</script>
+</body>
+
+</html>

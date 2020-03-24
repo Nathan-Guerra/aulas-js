@@ -1,0 +1,58 @@
+<html>
+
+<head>
+	<title>
+		Exercicio JS
+	</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<div id="app">
+		<button class="botao">Clique em mim!</button>
+	</div>
+
+	<script>
+
+		function criarQuadrado() {
+			let divElem = document.createElement('div');
+			divElem.setAttribute('class', 'quadrado');
+
+			divElem.style.width = 100;
+			divElem.style.height = 100;
+			divElem.style.backgroundColor = "#f00";
+
+			let app = document.querySelector('#app');
+
+			app.appendChild(divElem);
+
+			divElem.onmouseover = novaCor;
+
+		}
+
+		let btnElem = document.querySelector('button.botao');
+
+		btnElem.onclick = criarQuadrado;
+
+		function getRandomColor() {
+			let letters = "0123456789ABCDEF";
+			let color = "#";
+			for (var i = 0; i < 6; i++) {
+				color += letters[Math.floor(Math.random() * 16)];
+			}
+			return color;
+		}
+
+
+		function novaCor() {
+			let newColor = getRandomColor(); // #E943F0
+			this.style.backgroundColor = newColor;
+		}
+
+
+
+	</script>
+</body>
+
+</html>

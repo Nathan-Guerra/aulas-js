@@ -1,0 +1,36 @@
+<html>
+
+<head>
+	<title>
+		Exercicio JS
+	</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<div id="app">
+		<button class="botao">Clique em mim!</button>
+	</div>
+
+	<script>
+
+		function criarQuadrado() {
+			let divElem = document.createElement('div');
+
+			divElem.style.width = 100;
+			divElem.style.height = 100;
+			divElem.style.backgroundColor = "#f00";
+
+			let app = document.querySelector('#app');
+
+			app.appendChild(divElem);
+		}
+
+		let btnElem = document.querySelector('button.botao');
+
+		btnElem.onclick = criarQuadrado;
+	</script>
+</body>
+
+</html>

@@ -35,9 +35,10 @@
 			let ulElem = document.querySelector('.lista');
 			let li = document.createElement('li');
 			let inputElem = document.querySelector('input[name="nome"]');
-			let text = inputElem.value;
 
-			li.append(text);
+			let text = document.createTextNode(inputElem.value);
+
+			li.appendChild(text);
 			ulElem.appendChild(li);
 
 			apagar(inputElem);
